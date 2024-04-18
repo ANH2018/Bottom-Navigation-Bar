@@ -22,9 +22,10 @@ class _customhomescreenState extends State<customhomescreen> {
 
   Widget build(BuildContext context) {
     return  Scaffold(
-        
+         backgroundColor:Colors.blue,
          body: tabs[_selecindex],
          bottomNavigationBar:BottomNavigationBar( 
+          backgroundColor:Colors.blue,
           type: BottomNavigationBarType.fixed, // canh chinh
           unselectedItemColor:Colors.red,
           selectedItemColor: Colors.black,
