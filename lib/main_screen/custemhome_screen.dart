@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class customhomescreen extends StatefulWidget {
   const customhomescreen({super.key});
@@ -9,11 +10,20 @@ class customhomescreen extends StatefulWidget {
 
 class _customhomescreenState extends State<customhomescreen> {
   @override
+  final List <Widget> tabs =const[
+    Center(child: Text("Homesreen"),),
+    Center(child: Text("catelogysreen"),),
+    Center(child: Text("storesreen"),),
+    Center(child: Text("cartsreen"),),
+    Center(child: Text("profilesreen"),),
+
+  ];
   int _selecindex=0;
 
   Widget build(BuildContext context) {
     return  Scaffold(
-
+        
+         body: tabs[_selecindex],
          bottomNavigationBar:BottomNavigationBar( 
           type: BottomNavigationBarType.fixed, // canh chinh
           unselectedItemColor:Colors.red,
