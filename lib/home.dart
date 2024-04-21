@@ -24,16 +24,22 @@ class _homescreenState extends State<homescreen> {
                       bottom: TabBar(
                         tabs: [
 
-                          Tab(child: Text('men screen',style:TextStyle(color: Colors.grey.shade600) ,),),
+                          Tab(child: Text('men ',style:TextStyle(color: Colors.grey.shade600) ,),),
 
-                          Tab(child: Text('women screen',style:TextStyle(color: Colors.grey.shade600) ,),),
+                          Tab(child: Text('women ',style:TextStyle(color: Colors.grey.shade600) ,),),
 
-                          Tab(child: Text('shoes screen',style:TextStyle(color: Colors.grey.shade600) ,),),
+                          Tab(child: Text('shoes ',style:TextStyle(color: Colors.grey.shade600) ,),),
 
                         ],
                         ),
                   ),
-              
+                   body: const TabBarView(children: [
+                    Center(child: Text('men screen'),),
+                    Center(child: Text('women screen'),),
+                    Center(child: Text('shoes screen'),),
+
+
+                   ]),
            
                          ),
     );
