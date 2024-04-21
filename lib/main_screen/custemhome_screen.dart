@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_application_1/home.dart';
 
 class customhomescreen extends StatefulWidget {
   const customhomescreen({Key? key}) : super(key: key);
@@ -10,11 +11,12 @@ class customhomescreen extends StatefulWidget {
 
 class _customhomescreenState extends State<customhomescreen> {
   final List<Widget> tabs = const [
-    Center(child: Image(image: AssetImage('asset/test_theme.jpg'))), // Thêm hình ảnh vào tab Home
-    Center(child: Text("catelogysreen")),
-    Center(child: Text("storesreen")),
-    Center(child: Text("cartsreen")),
-    Center(child: Text("profilesreen")),
+   // Center(child: Text("home screen")), // Thêm hình ảnh vào tab Home
+   homescreen(),
+    Center(child: Text("catelogy sreen")),
+    Center(child: Text("store sreen")),
+    Center(child: Text("cart sreen")),
+    Center(child: Text("profile sreen")),
   ];
   int _selectedIndex = 0;
 
