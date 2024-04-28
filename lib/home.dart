@@ -1,6 +1,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 class homescreen extends StatefulWidget {
   const homescreen({super.key});
 
@@ -20,7 +22,43 @@ class _homescreenState extends State<homescreen> {
                   appBar: AppBar(
                       elevation: 0,
                       backgroundColor: Colors.white,
-                      title: const CupertinoSearchTextField(),
+
+                      title: Container(
+                        height: 35,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.yellow,width: 1.4),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+
+
+                        child: Row(
+                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                          Row(
+                            children: [
+                              Icon(Icons.search,color: Colors.grey,),
+                                 Text('what are you looking for ?',style: TextStyle
+                          (fontSize: 16,color: Colors.grey),),
+                            ],
+                          ),
+
+                           Container(
+                            height: 35,
+                            width: 72,
+                            decoration: BoxDecoration(
+                              color: Colors.yellow,
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Center(child: Text('search',style: TextStyle(fontSize: 16,color: Colors.grey),)),
+                           ),
+                           
+
+
+                        ],
+                        ),
+                         
+                      ), 
+                      
                       bottom: TabBar(
                         isScrollable: true,
                         indicatorColor: Colors.yellow,
